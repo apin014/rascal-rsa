@@ -1,0 +1,19 @@
+{
+  "name": "rascal-rsa",
+  "version": "1.0.0",
+  "description": "Instant messaging simulation app with RSA cipher",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apin014/rascal-rsa.git"
+  },
+  "author": "Muhammad Davin Dzimar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apin014/rascal-rsa/issues"
+  },
+  "homepage": "https://github.com/apin014/rascal-rsa#readme"
+}
