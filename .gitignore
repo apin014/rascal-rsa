@@ -131,3 +131,9 @@ dist
 
 # python
 *venv*
+*.venv*
+
+# C
+*build*
+*.so
+*.pyd
