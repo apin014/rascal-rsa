@@ -132,8 +132,14 @@ dist
 # python
 *venv*
 *.venv*
+downloads
+uploads
+__pycache__
 
 # C
 *build*
 *.so
 *.pyd
+
+#VSCode
+.vscode
