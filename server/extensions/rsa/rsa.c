@@ -2259,6 +2259,7 @@ int __pyx_module_is_main_rsa = 0;
 /* #### Code section: global_var ### */
 static PyObject *__pyx_builtin_range;
 static PyObject *__pyx_builtin_bin;
+static PyObject *__pyx_builtin_print;
 /* #### Code section: string_decls ### */
 static const char __pyx_k_[] = "";
 static const char __pyx_k_0[] = "0";
@@ -2278,6 +2279,7 @@ static const char __pyx_k_main[] = "__main__";
 static const char __pyx_k_math[] = "math";
 static const char __pyx_k_name[] = "__name__";
 static const char __pyx_k_test[] = "__test__";
+static const char __pyx_k_print[] = "print";
 static const char __pyx_k_range[] = "range";
 static const char __pyx_k_sympy[] = "sympy";
 static const char __pyx_k_utf_8[] = "utf-8";
@@ -2362,6 +2364,7 @@ typedef struct {
   PyObject *__pyx_n_s_name;
   PyObject *__pyx_n_s_p;
   PyObject *__pyx_n_s_plain_text;
+  PyObject *__pyx_n_s_print;
   PyObject *__pyx_n_s_private_key;
   PyObject *__pyx_n_s_public_key;
   PyObject *__pyx_n_s_q;
@@ -2456,6 +2459,7 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_name);
   Py_CLEAR(clear_module_state->__pyx_n_s_p);
   Py_CLEAR(clear_module_state->__pyx_n_s_plain_text);
+  Py_CLEAR(clear_module_state->__pyx_n_s_print);
   Py_CLEAR(clear_module_state->__pyx_n_s_private_key);
   Py_CLEAR(clear_module_state->__pyx_n_s_public_key);
   Py_CLEAR(clear_module_state->__pyx_n_s_q);
@@ -2528,6 +2532,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_name);
   Py_VISIT(traverse_module_state->__pyx_n_s_p);
   Py_VISIT(traverse_module_state->__pyx_n_s_plain_text);
+  Py_VISIT(traverse_module_state->__pyx_n_s_print);
   Py_VISIT(traverse_module_state->__pyx_n_s_private_key);
   Py_VISIT(traverse_module_state->__pyx_n_s_public_key);
   Py_VISIT(traverse_module_state->__pyx_n_s_q);
@@ -2610,6 +2615,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_name __pyx_mstate_global->__pyx_n_s_name
 #define __pyx_n_s_p __pyx_mstate_global->__pyx_n_s_p
 #define __pyx_n_s_plain_text __pyx_mstate_global->__pyx_n_s_plain_text
+#define __pyx_n_s_print __pyx_mstate_global->__pyx_n_s_print
 #define __pyx_n_s_private_key __pyx_mstate_global->__pyx_n_s_private_key
 #define __pyx_n_s_public_key __pyx_mstate_global->__pyx_n_s_public_key
 #define __pyx_n_s_q __pyx_mstate_global->__pyx_n_s_q
@@ -4330,21 +4336,32 @@ static PyObject *__pyx_f_3rsa_decrypt(PyObject *__pyx_v_cipher_text, PyObject *_
  *             break
  * 
  *     plain_text = plain_text[0:length]             # <<<<<<<<<<<<<<
+ *     print(plain_text)
  * 
- *     return bytes(plain_text)
  */
   __pyx_t_1 = __Pyx_PyList_GetSlice(__pyx_v_plain_text, 0, __pyx_v_length); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 81, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF_SET(__pyx_v_plain_text, ((PyObject*)__pyx_t_1));
   __pyx_t_1 = 0;
 
-  /* "rsa.pyx":83
+  /* "rsa.pyx":82
+ * 
  *     plain_text = plain_text[0:length]
+ *     print(plain_text)             # <<<<<<<<<<<<<<
+ * 
+ *     return bytes(plain_text)
+ */
+  __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_print, __pyx_v_plain_text); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 82, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+  /* "rsa.pyx":84
+ *     print(plain_text)
  * 
  *     return bytes(plain_text)             # <<<<<<<<<<<<<<
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyBytes_Type)), __pyx_v_plain_text); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 83, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyBytes_Type)), __pyx_v_plain_text); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 84, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
@@ -4603,6 +4620,7 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_name, __pyx_k_name, sizeof(__pyx_k_name), 0, 0, 1, 1},
     {&__pyx_n_s_p, __pyx_k_p, sizeof(__pyx_k_p), 0, 0, 1, 1},
     {&__pyx_n_s_plain_text, __pyx_k_plain_text, sizeof(__pyx_k_plain_text), 0, 0, 1, 1},
+    {&__pyx_n_s_print, __pyx_k_print, sizeof(__pyx_k_print), 0, 0, 1, 1},
     {&__pyx_n_s_private_key, __pyx_k_private_key, sizeof(__pyx_k_private_key), 0, 0, 1, 1},
     {&__pyx_n_s_public_key, __pyx_k_public_key, sizeof(__pyx_k_public_key), 0, 0, 1, 1},
     {&__pyx_n_s_q, __pyx_k_q, sizeof(__pyx_k_q), 0, 0, 1, 1},
@@ -4620,6 +4638,7 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
 static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
   __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 43, __pyx_L1_error)
   __pyx_builtin_bin = __Pyx_GetBuiltinName(__pyx_n_s_bin); if (!__pyx_builtin_bin) __PYX_ERR(0, 71, __pyx_L1_error)
+  __pyx_builtin_print = __Pyx_GetBuiltinName(__pyx_n_s_print); if (!__pyx_builtin_print) __PYX_ERR(0, 82, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;
   return -1;

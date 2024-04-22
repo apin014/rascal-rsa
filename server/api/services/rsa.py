@@ -51,3 +51,13 @@ def decipher_file(fileBytes: bytes, fileName: str, fileExt: str, d, n):
     with open(path, "wb") as decryptedFile:
         decryptedFile.write(decrypted)
     return FileResponse(path)
+
+def key_gen(key: dict, name: str): 
+    privateKeyPath = "keys/" + name + ".pri"
+    publicKeyPath = "keys/" + name + ".pub"
+    
+    with open(privateKeyPath, "w") as privateKey:
+        privateKey.write("d=" + str(key["private_key"][0]) + "\nn=" + str(key["private_key"][1]))
+        
+    with open(publicKeyPath, "w") as publicKey:
+        publicKey.write("e=" + str(key["public_key"][0]) + "\nn=" + str(key["public_key"][1]))

@@ -3,6 +3,7 @@
 *.venv*
 downloads
 uploads
+keys
 __pycache__
 
 # C
