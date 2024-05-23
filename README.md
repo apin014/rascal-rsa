@@ -12,4 +12,4 @@ aplikasi simulasi pertukaran pesan instan yang mengimplementasikan cipher RSA (R
 8. Masuk ke alamat URL yang diperlihatkan oleh app
 
 ---
-Perlu diperhatikan bahwa versi Node.JS yang digunakan adalah versi 20+ dan versi Python yang digunakan adalah 3.12+.
+Perlu diperhatikan bahwa versi Node.JS yang digunakan adalah versi **20+** dan versi Python yang digunakan adalah versi **3.12+**
