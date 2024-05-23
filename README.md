@@ -10,3 +10,6 @@ aplikasi simulasi pertukaran pesan instan yang mengimplementasikan cipher RSA (R
 6. Untuk menjalankan server, masuk ke folder `server` dan jalankan `python main.py`
 7. Untuk menjalankan app, masuk ke folder `app` dan jalankan `npm run dev`
 8. Masuk ke alamat URL yang diperlihatkan oleh app
+
+---
+Perlu diperhatikan bahwa versi Node.JS yang digunakan adalah versi 20+ dan versi Python yang digunakan adalah 3.12+.
